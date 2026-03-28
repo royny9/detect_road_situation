@@ -2,19 +2,6 @@ import json
 import os
 from PIL import Image
 
-# class toYoloFormat():
-#     def __init__(self, path_labels, path_img=None):
-#         self.new_dict = dict()
-#         self.obj_nn = ['car', 'pothole', 'person']
-#         with open(path_labels, 'r') as labels:
-#             json_labels = json.load(labels)
-#             for item in json_labels:
-#                 labels_on_img = item['labels']
-#                 cls_to_box = dict()
-#                 for cat in labels_on_img:
-#                     if cat['category'] in self.obj_nn:
-#                         cls_to_box[cat['category']] = cat['box2d']
-
 
 
 class toYoloFormat():
@@ -23,7 +10,7 @@ class toYoloFormat():
         self.obj_nn = {
             'car':0,
             'person':1,
-            'pothole':2
+            'pothole':2#нет в датасете!
         }
         self.path_labels = path_labels
         self.mode = mode
@@ -112,3 +99,6 @@ a = toYoloFormat(path_labels='bdd/bdd100k_labels_release/bdd100k/labels/bdd100k_
                  path_img_folder='bdd/bdd100k/bdd100k/images/100k/val')
 
 a.crate_txt_yolo()
+
+
+

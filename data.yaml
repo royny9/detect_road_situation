@@ -1,0 +1,12 @@
+path : E:\programming\bdd100k\bdd_new
+train : E:\programming\bdd100k\bdd_new\images\train
+val : E:\programming\bdd100k\bdd_new\images\val
+test : E:\programming\bdd100k\bdd_new\images\test
+
+nc: 2
+
+names:
+  0 : car
+  1 : person 
+
+class_weights: [1.0, 3.5]   # car = 1, person = 3.5
